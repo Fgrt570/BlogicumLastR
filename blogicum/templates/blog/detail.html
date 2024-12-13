@@ -26,8 +26,9 @@
           </small>
         </h6>
         <p class="card-text">{{ post.text|linebreaksbr }}</p>
-        {% if user == post.author %}
+        {% if user %}
           <div class="mb-2">
+
             <a class="btn btn-sm text-muted" href="{% url 'blog:edit_post' post.id %}" role="button">
               Отредактировать публикацию
             </a>
